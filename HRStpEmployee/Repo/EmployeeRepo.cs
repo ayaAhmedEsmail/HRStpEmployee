@@ -56,26 +56,27 @@ namespace HRStpEmployee.Repo
 
         public Task<PaginationResult<EmpDTO>> GetAllEmp(int currntPage, int size)
         {
-            var res = PaginationResult<EmpDTO>.CreatePages(
-                context.HrstpEmployees.Select( e=> new EmpDTO { 
-                    EmpCode= e.EmployeeCode,
-                    FlfirstName = e.FlfirstName,
-                    FlsecondName = e.FlsecondName,
-                    FlthirdName = e.FlthirdName,
-                    FlfourthName = e.FlfourthName,
-                    SlfirstName = e.SlfirstName,
-                    SlsecondName = e.SlsecondName,
-                    SlthirdName = e.SlthirdName,
-                    SlfourthName = e.SlfourthName,
-                    DateofBirth = e.DateofBirth,
-                    Age = e.getAge(),
-                    GenderGuid = e.GenderGuid,
-                    EnglishFullName = e.getFullEngName(),
-                    ArabicFullName = e.getFullArName(),
-                } ).OrderBy(e=>e.EmpCode), currntPage, pageSize:size);
+            //var res = PaginationResult<EmpDTO>.CreatePages(
+            //    context.HrstpEmployees.Select( e=> new EmpDTO { 
+            //        EmpCode= e.EmployeeCode,
+            //        FlfirstName = e.FlfirstName,
+            //        FlsecondName = e.FlsecondName,
+            //        FlthirdName = e.FlthirdName,
+            //        FlfourthName = e.FlfourthName,
+            //        SlfirstName = e.SlfirstName,
+            //        SlsecondName = e.SlsecondName,
+            //        SlthirdName = e.SlthirdName,
+            //        SlfourthName = e.SlfourthName,
+            //        DateofBirth = e.DateofBirth,
+            //        Age = e.getAge(),
+            //        GenderGuid = e.GenderGuid,
+            //        EnglishFullName = e.getFullEngName(),
+            //        ArabicFullName = e.getFullArName(),
+            //    } ).OrderBy(e=>e.EmpCode), currntPage, pageSize:size);
 
 
-            return res;
+            //  return res;
+            return null;
         }
 
         public async Task<Employee> GetEmpByCode(string empCode)

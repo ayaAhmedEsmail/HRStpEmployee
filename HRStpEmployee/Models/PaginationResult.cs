@@ -18,7 +18,7 @@ namespace HRStpEmployee.Models
             TotalItems = count;
         }
 
-        public static async Task<PaginationResult<T>> CreatePages(IQueryable<T> items, int pageIndex, int pageSize)
+        public static async Task<PaginationResult<T>> CreatePages(IQueryable<T> items, int pageIndex, int pageSize, CancellationToken cancellationToken)
         {
             var count = await items.CountAsync();
 

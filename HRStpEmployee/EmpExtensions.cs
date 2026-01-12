@@ -6,9 +6,9 @@ public static class EmpExtensions
     public static int getAge(this Employee employee)
     {
 
-        var date= DateTime.Now;
+        var date = DateTime.Now;
         var dob = employee.DateofBirth;
-        if (dob==null) return 0;
+        if (dob == null) return 0;
 
         var age = date.Year - dob.Value.Year;
         return age;
